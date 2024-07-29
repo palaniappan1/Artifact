@@ -1,0 +1,35 @@
+{
+    "expected": [
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r9 = virtualinvoke $r8.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()",
+            "sourceMethod": "public static String getImei(Context context)",
+            "sinkMethod": "public static HttpURLConnection sendHttpRequest(String path, String method, List<NameValuePair> paramsList, List<NameValuePair> propertyList)"
+        },
+        {
+            "source": "$r6 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r5)",
+            "sink": "virtualinvoke $r6.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r0, null, $r2, null, null)",
+            "sourceMethod": "private SmsMessage[] getSmsMessages(Bundle paramBundle)",
+            "sinkMethod": "public static boolean sendSms(String number, String text)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r6.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r0, null, $r2, null, null)",
+            "sourceMethod": "public static String getImei(Context context)",
+            "sinkMethod": "public static boolean sendSms(String number, String text)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r7.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r0, null, $r2, null, null)",
+            "sourceMethod": "public static String getImei(Context context)",
+            "sinkMethod": "public static boolean sendSms(String number, String text)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r14 = virtualinvoke $r9.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()",
+            "sourceMethod": "public static String getImei(Context context)",
+            "sinkMethod": "public static HttpURLConnection sendHttpRequest(String path, String method, List<NameValuePair> paramsList, List<NameValuePair> propertyList, boolean uploadFile, String data)"
+        }
+    ],
+    "unExpected": []
+}

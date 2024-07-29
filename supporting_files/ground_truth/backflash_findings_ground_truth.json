@@ -1,0 +1,150 @@
+{
+    "expected": [
+        {
+            "source": "$r9 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getSimCountryIso()>()",
+            "sink": "virtualinvoke $r3.<java.io.OutputStreamWriter: void write(java.lang.String)>($r2)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "private void writeConfig(String config, String data)"
+        },
+        {
+            "source": "$r6 = virtualinvoke $r2.<android.content.Context: java.io.FileInputStream openFileInput(java.lang.String)>($r1)",
+            "sink": "$r14 = virtualinvoke $r13.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()",
+            "sourceMethod": "private String readConfig(String config, Context context)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"incoming_number\")",
+            "sink": "virtualinvoke $r3.<java.io.DataOutputStream: void write(byte[],int,int)>($r2, 0, $i0)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"incoming_number\")",
+            "sink": "$r14 = virtualinvoke $r13.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r4.<java.io.OutputStreamWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "private void saveData(String data, String f, Context context)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r4.<java.io.OutputStreamWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "private void saveData(String data, String f, Context context)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r4.<java.io.OutputStreamWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "private void saveData(String data, String f, Context context)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r4.<java.io.OutputStreamWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "private void saveData(String data, String f, Context context)"
+        },
+        {
+            "source": "$r14 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"incoming_number\")",
+            "sink": "virtualinvoke $r4.<java.io.OutputStreamWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "private void saveData(String data, String f, Context context)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r3.<java.io.DataOutputStream: void write(byte[],int,int)>($r2, 0, $i0)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r3.<java.io.DataOutputStream: void write(byte[],int,int)>($r2, 0, $i0)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r3.<java.io.DataOutputStream: void write(byte[],int,int)>($r2, 0, $i0)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r3.<java.io.DataOutputStream: void write(byte[],int,int)>($r2, 0, $i0)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        }
+    ],
+    "unExpected": [
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r4.<java.io.OutputStreamWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "private void saveData(String data, String f, Context context)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r4.<java.io.OutputStreamWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "private void saveData(String data, String f, Context context)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "$r14 = virtualinvoke $r13.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "$r14 = virtualinvoke $r13.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "$r14 = virtualinvoke $r13.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "$r14 = virtualinvoke $r13.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "$r14 = virtualinvoke $r13.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "$r14 = virtualinvoke $r13.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"incoming_number\")",
+            "sink": "virtualinvoke $r4.<java.io.OutputStreamWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "private void saveData(String data, String f, Context context)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r3.<java.io.DataOutputStream: void write(byte[],int,int)>($r2, 0, $i0)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"android.intent.extra.PHONE_NUMBER\")",
+            "sink": "virtualinvoke $r3.<java.io.DataOutputStream: void write(byte[],int,int)>($r2, 0, $i0)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        }
+    ]
+}

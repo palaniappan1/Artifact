@@ -1,0 +1,23 @@
+{
+    "expected": [
+        {
+            "source": "$r5 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r4, null, null, null, null)",
+            "sink": "virtualinvoke $r10.<javax.mail.Transport: void sendMessage(javax.mail.Message,javax.mail.Address[])>($r5, $r11)",
+            "sourceMethod": "public List<Person> getContactsInfoListFromPhone()",
+            "sinkMethod": "public static void sendByJavaMail(String str_from, String str_to, String str_title, String str_content)"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r4, null, $r8, null, null)",
+            "sink": "virtualinvoke $r2.<java.io.BufferedWriter: void write(java.lang.String)>($r0)",
+            "sourceMethod": "public List<Person> getContactsInfoListFromPhone()",
+            "sinkMethod": "public static void write(String filePath, String contentStr)"
+        },
+        {
+            "source": "specialinvoke $r8.<java.io.FileInputStream: void <init>(java.lang.String)>($r4)",
+            "sink": "virtualinvoke $r5.<java.io.DataOutputStream: void write(byte[],int,int)>($r9, 0, $i0)",
+            "sourceMethod": "public static void uploadFile()",
+            "sinkMethod": "public static void uploadFile()"
+        }
+    ],
+    "unExpected": []
+}

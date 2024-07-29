@@ -1,0 +1,10 @@
+<android.content.Intent: java.lang.String getStringExtra(java.lang.String)> -> _SOURCE_
+<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)> -> _SOURCE_
+<android.net.wifi.WifiInfo: java.lang.String getMacAddress()> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getSimCountryIso()> -> _SOURCE_
+<android.widget.EditText: android.text.Editable getText()> -> _SOURCE_
+
+<android.content.ContentValues: void put(java.lang.String,java.lang.String)> -> _SINK_
+<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)> -> _SINK_
+<com.savemebeta.Scan: void startActivity(android.content.Intent)> -> _SINK_
+<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_

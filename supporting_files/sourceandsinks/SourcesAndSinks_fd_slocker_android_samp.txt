@@ -1,0 +1,4 @@
+<android.telephony.TelephonyManager: java.lang.String getDeviceId()> -> _SOURCE_
+<android.widget.EditText: android.text.Editable getText()> -> _SOURCE_
+
+<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_

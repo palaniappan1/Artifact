@@ -1,0 +1,35 @@
+{
+    "expected": [
+        {
+            "source": "$r5 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r15 = interfaceinvoke $r4.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r10)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void sendCode(String code, String imei)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r7 = interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public static void debug(String code)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r4.<android.widget.EditText: android.text.Editable getText()>()",
+            "sink": "$r15 = interfaceinvoke $r4.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r10)",
+            "sourceMethod": "public void onClick(View v)",
+            "sinkMethod": "public void sendCode(String code, String imei)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r4.<android.widget.EditText: android.text.Editable getText()>()",
+            "sink": "$r7 = interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public void onClick(View v)",
+            "sinkMethod": "public static void debug(String code)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r13 = interfaceinvoke $r3.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r9)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public String checkState(String imei)"
+        }
+    ],
+    "unExpected": []
+}

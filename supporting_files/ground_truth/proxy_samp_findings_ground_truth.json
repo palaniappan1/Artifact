@@ -1,0 +1,126 @@
+{
+    "expected": [
+        {
+            "source": "$i0 = virtualinvoke $r17.<android.telephony.gsm.GsmCellLocation: int getLac()>()",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"proxy\", $r18)",
+            "sourceMethod": "public void run()",
+            "sinkMethod": "public void run()"
+        },
+        {
+            "source": "$i0 = virtualinvoke $r17.<android.telephony.gsm.GsmCellLocation: int getLac()>()",
+            "sink": "$r21 = interfaceinvoke $r4.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r7)",
+            "sourceMethod": "public void run()",
+            "sinkMethod": "public void run()"
+        },
+        {
+            "source": "specialinvoke $r4.<java.io.File: void <init>(java.io.File,java.lang.String)>($r6, \"ProxyLog.out\")",
+            "sink": "$r13 = virtualinvoke $r12.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r2)",
+            "sourceMethod": "public void run()",
+            "sinkMethod": "public void run()"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r8.<android.accounts.AccountManager: android.accounts.Account[] getAccounts()>()",
+            "sink": "virtualinvoke $r3.<java.io.BufferedWriter: void write(java.lang.String)>($r7)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "private void LogToFile()"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r8.<android.accounts.AccountManager: android.accounts.Account[] getAccounts()>()",
+            "sink": "virtualinvoke $r3.<java.io.BufferedWriter: void write(java.lang.String)>($r7)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "private void LogToFile()"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, null, $r5, null, \"date\")",
+            "sink": "virtualinvoke $r3.<java.io.BufferedWriter: void write(java.lang.String)>($r7)",
+            "sourceMethod": "public void QuerySMSLog(boolean first)",
+            "sinkMethod": "private void LogToFile()"
+        },
+        {
+            "source": "$r10 = virtualinvoke $r9.<android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>()",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"proxy\", $r3)",
+            "sourceMethod": "public int onStartCommand(Intent intent, int flags, int startId)",
+            "sinkMethod": "public static void LogFile(String logstr)"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r13.<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()>()",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"proxy\", $r3)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public static void LogFile(String logstr)"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r8.<android.accounts.AccountManager: android.accounts.Account[] getAccounts()>()",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"proxy\", $r3)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public static void LogFile(String logstr)"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r8.<android.accounts.AccountManager: android.accounts.Account[] getAccounts()>()",
+            "sink": "$r13 = virtualinvoke $r12.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r2)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public void run()"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r13.<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()>()",
+            "sink": "virtualinvoke $r3.<java.io.BufferedWriter: void write(java.lang.String)>($r7)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "private void LogToFile()"
+        },
+        {
+            "source": "$r10 = virtualinvoke $r9.<android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>()",
+            "sink": "virtualinvoke $r3.<java.io.BufferedWriter: void write(java.lang.String)>($r7)",
+            "sourceMethod": "public int onStartCommand(Intent intent, int flags, int startId)",
+            "sinkMethod": "private void LogToFile()"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, null, $r5, null, \"date\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"proxy\", $r3)",
+            "sourceMethod": "public void QuerySMSLog(boolean first)",
+            "sinkMethod": "public static void LogFile(String logstr)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, null, $r6, null, \"date\")",
+            "sink": "virtualinvoke $r3.<java.io.BufferedWriter: void write(java.lang.String)>($r7)",
+            "sourceMethod": "public void QueryPhoneLog(boolean first)",
+            "sinkMethod": "private void LogToFile()"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, null, null, null, \"date DESC\")",
+            "sink": "virtualinvoke $r3.<java.io.BufferedWriter: void write(java.lang.String)>($r7)",
+            "sourceMethod": "public void QueryPhoneLog(boolean first)",
+            "sinkMethod": "private void LogToFile()"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, null, $r6, null, \"date\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"proxy\", $r3)",
+            "sourceMethod": "public void QueryPhoneLog(boolean first)",
+            "sinkMethod": "public static void LogFile(String logstr)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, null, null, null, \"date DESC\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"proxy\", $r3)",
+            "sourceMethod": "public void QueryPhoneLog(boolean first)",
+            "sinkMethod": "public static void LogFile(String logstr)"
+        }
+    ],
+    "unExpected": [
+        {
+            "source": "specialinvoke $r2.<java.io.File: void <init>(java.io.File,java.lang.String)>($r15, \"ProxyLog.out\")",
+            "sink": "virtualinvoke $r3.<java.io.BufferedWriter: void write(java.lang.String)>($r7)",
+            "sourceMethod": "public int onStartCommand(Intent intent, int flags, int startId)",
+            "sinkMethod": "private void LogToFile()"
+        },
+        {
+            "source": "$r10 = virtualinvoke $r9.<android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>()",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"post\", $r5)",
+            "sourceMethod": "public int onStartCommand(Intent intent, int flags, int startId)",
+            "sinkMethod": "public int onStartCommand(Intent intent, int flags, int startId)"
+        },
+        {
+            "source": "specialinvoke $r2.<java.io.File: void <init>(java.io.File,java.lang.String)>($r15, \"ProxyLog.out\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"post\", $r5)",
+            "sourceMethod": "public int onStartCommand(Intent intent, int flags, int startId)",
+            "sinkMethod": "public int onStartCommand(Intent intent, int flags, int startId)"
+        }
+    ]
+}

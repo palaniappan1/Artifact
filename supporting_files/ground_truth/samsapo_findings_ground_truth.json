@@ -1,0 +1,36 @@
+{
+    "expected": [
+        {
+            "source": "$r1 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i2)",
+            "sink": "$r11 = interfaceinvoke $r3.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r8)",
+            "sourceMethod": "public String getMessages(String str)",
+            "sinkMethod": "public String doInBackground(ArrayList<String[]>... arrayListArr)"
+        },
+        {
+            "source": "$r7 = staticinvoke <android.telephony.gsm.SmsMessage: android.telephony.gsm.SmsMessage createFromPdu(byte[])>($r6)",
+            "sink": "virtualinvoke $r20.<com.android.tools.system.MyPostRequest: android.os.AsyncTask execute(java.lang.Object[])>($r21)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r2 = virtualinvoke $r1.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>(\"phone\")",
+            "sink": "virtualinvoke $r5.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>($r2, $r6)",
+            "sourceMethod": "private Object getTelephonyServiceObject(Context context)",
+            "sinkMethod": "private void getAndInvokeMethod(Class cls, Object obj, String str)"
+        },
+        {
+            "source": "$r7 = staticinvoke <android.telephony.gsm.SmsMessage: android.telephony.gsm.SmsMessage createFromPdu(byte[])>($r6)",
+            "sink": "$r11 = interfaceinvoke $r3.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r8)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(ArrayList<String[]>... arrayListArr)"
+        }
+    ],
+    "unExpected": [
+        {
+            "source": "$r2 = virtualinvoke $r1.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>(\"phone\")",
+            "sink": "$r2 = virtualinvoke $r7.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>($r3, $r8)",
+            "sourceMethod": "private Object getTelephonyServiceObject(Context context)",
+            "sinkMethod": "private Object getTelephonyServiceObject(Context context)"
+        }
+    ]
+}

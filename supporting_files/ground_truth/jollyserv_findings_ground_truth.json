@@ -1,0 +1,11 @@
+{
+    "expected": [
+        {
+            "source": "$r8 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r8 = virtualinvoke $r7.<java.util.concurrent.ThreadPoolExecutor: java.util.concurrent.Future submit(java.lang.Runnable)>(r12)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "private void sendRequest(DefaultHttpClient defaultHttpClient, HttpContext httpContext, HttpUriRequest httpUriRequest, String str, AsyncHttpResponseHandler asyncHttpResponseHandler, Context context)"
+        }
+    ],
+    "unExpected": []
+}

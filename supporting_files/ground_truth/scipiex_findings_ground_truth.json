@@ -1,0 +1,23 @@
+{
+    "expected": [
+        {
+            "source": "$r5 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()",
+            "sink": "virtualinvoke $r12.<java.io.OutputStream: void write(byte[])>($r9)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "private String sendPostRequest(String path, Map<String, String> params, String encoding)"
+        },
+        {
+            "source": "$r16 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r15)",
+            "sink": "virtualinvoke $r12.<java.io.OutputStream: void write(byte[])>($r9)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "private String sendPostRequest(String path, Map<String, String> params, String encoding)"
+        },
+        {
+            "source": "$r6 = virtualinvoke $r4.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r5, null, null, null, null)",
+            "sink": "virtualinvoke $r1.<java.io.PrintWriter: void println(java.lang.String)>($r6)",
+            "sourceMethod": "public synchronized List readAllContacts()",
+            "sinkMethod": "public void writeToFile(PrintWriter pw)"
+        }
+    ],
+    "unExpected": []
+}

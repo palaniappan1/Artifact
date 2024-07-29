@@ -1,0 +1,11 @@
+{
+    "expected": [
+        {
+            "source": "$r13 = virtualinvoke $r12.<android.content.res.AssetManager: java.io.InputStream open(java.lang.String)>(\"ds\")",
+            "sink": "$r17 = virtualinvoke $r16.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>(null, $r3)",
+            "sourceMethod": "private void loadClass(Context context)",
+            "sinkMethod": "private void loadClass(Context context)"
+        }
+    ],
+    "unExpected": []
+}

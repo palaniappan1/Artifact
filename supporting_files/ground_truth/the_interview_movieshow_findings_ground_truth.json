@@ -1,0 +1,11 @@
+{
+    "expected": [
+        {
+            "source": "$r9 = virtualinvoke $r6.<java.net.URL: java.io.InputStream openStream()>()",
+            "sink": "virtualinvoke $r0.<com.movieshow.down.Badaccents: void startActivity(android.content.Intent)>($r1)",
+            "sourceMethod": "public String doInBackground(String... f_url)",
+            "sinkMethod": "public void playMusic()"
+        }
+    ],
+    "unExpected": []
+}

@@ -1,0 +1,84 @@
+{
+    "expected": [
+        {
+            "source": "$r4 = virtualinvoke $r0.<android.content.Context: java.io.FileInputStream openFileInput(java.lang.String)>(\"mount\")",
+            "sink": "virtualinvoke $r2.<java.io.DataOutputStream: void writeBytes(java.lang.String)>($r0)",
+            "sourceMethod": "public static String getMountDate(Context context)",
+            "sinkMethod": "public static boolean exeCMD(String cmd)"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"chat\")",
+            "sink": "virtualinvoke $r10.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"ligan\", $r4)",
+            "sourceMethod": "public void getSN()",
+            "sinkMethod": "public void getSN()"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"chat\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"yincc\", $r4)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"chat\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"yincc\", $r9)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"chat\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"yincc\", $r4)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"ligan\", $r7)",
+            "sourceMethod": "public void getSN()",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"chat\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"ligan\", $r7)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"chat\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"yincc\", $r9)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"yincc\", $r6)",
+            "sourceMethod": "public void getSN()",
+            "sinkMethod": "public void getSN()"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"chat\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"ligan\", \"same msg \")",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"newPkg\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"yincc\", $r5)",
+            "sourceMethod": "public void onReceive(final Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(final Context context, Intent intent)"
+        }
+    ],
+    "unExpected": [
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"chat\")",
+            "sink": "staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>(\"ligan\", \"new msg \")",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        }
+    ]
+}

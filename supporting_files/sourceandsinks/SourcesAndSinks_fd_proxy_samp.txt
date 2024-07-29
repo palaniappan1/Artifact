@@ -1,0 +1,11 @@
+<android.accounts.AccountManager: android.accounts.Account[] getAccounts()> -> _SOURCE_
+<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)> -> _SOURCE_
+<android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> -> _SOURCE_
+<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()> -> _SOURCE_
+<android.telephony.gsm.GsmCellLocation: int getLac()> -> _SOURCE_
+<java.io.File: void <init>(java.io.File,java.lang.String)> -> _SOURCE_
+
+<android.util.Log: int i(java.lang.String,java.lang.String)> -> _SINK_
+<java.io.BufferedWriter: void write(java.lang.String)> -> _SINK_
+<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_
+<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_

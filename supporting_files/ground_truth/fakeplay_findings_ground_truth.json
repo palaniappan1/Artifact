@@ -1,0 +1,17 @@
+{
+    "expected": [
+        {
+            "source": "$r14 = virtualinvoke $r12.<android.telephony.TelephonyManager: java.lang.String getNetworkOperatorName()>()",
+            "sink": "virtualinvoke $r1.<java.io.OutputStream: void write(byte[],int,int)>($r2, 0, $i0)",
+            "sourceMethod": "public void smsReceived(Intent intent)",
+            "sinkMethod": "public void writeTo(OutputStream os)"
+        },
+        {
+            "source": "$r17 = virtualinvoke $r16.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()",
+            "sink": "virtualinvoke $r1.<java.io.OutputStream: void write(byte[],int,int)>($r2, 0, $i0)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void writeTo(OutputStream os)"
+        }
+    ],
+    "unExpected": []
+}

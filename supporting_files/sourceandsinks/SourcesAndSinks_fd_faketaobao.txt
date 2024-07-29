@@ -1,0 +1,3 @@
+<android.widget.EditText: android.text.Editable getText()> -> _SOURCE_
+
+<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_

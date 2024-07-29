@@ -1,0 +1,6 @@
+<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getDeviceId()> -> _SOURCE_
+<org.apache.http.HttpEntity: java.io.InputStream getContent()> -> _SOURCE_
+
+<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)> -> _SINK_
+<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_

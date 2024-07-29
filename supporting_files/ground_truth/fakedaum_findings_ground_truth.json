@@ -1,0 +1,17 @@
+{
+    "expected": [
+        {
+            "source": "$r4 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r16)",
+            "sink": "$r14 = interfaceinvoke $r13.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r7)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public T post(HttpPost request, String url, Map<String, String> data, Class<T> clazz)"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()>()",
+            "sink": "$r14 = interfaceinvoke $r13.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r7)",
+            "sourceMethod": "public static final String getImei(Context context)",
+            "sinkMethod": "public T post(HttpPost request, String url, Map<String, String> data, Class<T> clazz)"
+        }
+    ],
+    "unExpected": []
+}

@@ -1,0 +1,23 @@
+{
+    "expected": [
+        {
+            "source": "$r11 = virtualinvoke $r10.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r4, null, null, null, null)",
+            "sink": "virtualinvoke $r6.<java.io.DataOutputStream: void write(byte[])>($r15)",
+            "sourceMethod": "public static List<String> getContacts(Context context)",
+            "sinkMethod": "public static HttpURLConnection sendHttpRequest(String path, String method, List<NameValuePair> paramsList, List<NameValuePair> propertyList, boolean uploadFile, String data)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()",
+            "sink": "virtualinvoke $r6.<java.io.DataOutputStream: void write(byte[])>($r15)",
+            "sourceMethod": "public static String getImsi(Context context)",
+            "sinkMethod": "public static HttpURLConnection sendHttpRequest(String path, String method, List<NameValuePair> paramsList, List<NameValuePair> propertyList, boolean uploadFile, String data)"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.content.pm.PackageManager: java.util.List getInstalledPackages(int)>(0)",
+            "sink": "virtualinvoke $r6.<java.io.DataOutputStream: void write(byte[])>($r15)",
+            "sourceMethod": "public static List<PackageInfo> getInstalledAppList(Context context)",
+            "sinkMethod": "public static HttpURLConnection sendHttpRequest(String path, String method, List<NameValuePair> paramsList, List<NameValuePair> propertyList, boolean uploadFile, String data)"
+        }
+    ],
+    "unExpected": []
+}

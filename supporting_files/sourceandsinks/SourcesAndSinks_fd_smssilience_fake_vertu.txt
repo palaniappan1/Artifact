@@ -1,0 +1,4 @@
+<android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getLine1Number()> -> _SOURCE_
+
+<java.io.PrintWriter: void write(java.lang.String)> -> _SINK_

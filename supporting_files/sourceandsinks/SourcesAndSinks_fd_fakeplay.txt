@@ -1,0 +1,4 @@
+<android.telephony.TelephonyManager: java.lang.String getLine1Number()> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getNetworkOperatorName()> -> _SOURCE_
+
+<java.io.OutputStream: void write(byte[],int,int)> -> _SINK_

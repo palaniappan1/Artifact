@@ -1,0 +1,3 @@
+<android.content.res.AssetManager: java.io.InputStream open(java.lang.String)> -> _SOURCE_
+
+<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])> -> _SINK_

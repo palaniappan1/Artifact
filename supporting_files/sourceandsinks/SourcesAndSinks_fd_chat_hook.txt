@@ -1,0 +1,7 @@
+<android.content.Context: java.io.FileInputStream openFileInput(java.lang.String)> -> _SOURCE_
+<android.content.Intent: java.lang.String getStringExtra(java.lang.String)> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getDeviceId()> -> _SOURCE_
+
+<android.util.Log: int i(java.lang.String,java.lang.String)> -> _SINK_
+<java.io.DataOutputStream: void writeBytes(java.lang.String)> -> _SINK_
+<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_

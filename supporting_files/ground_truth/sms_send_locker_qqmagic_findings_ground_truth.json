@@ -1,0 +1,54 @@
+{
+    "expected": [
+        {
+            "source": "$r4 = virtualinvoke $r13.<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()>()",
+            "sink": "virtualinvoke $r7.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r4, null, $r11, null, null)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r13.<android.telephony.SmsMessage: java.lang.String getDisplayOriginatingAddress()>()",
+            "sink": "virtualinvoke $r7.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r4, null, $r11, null, null)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r13.<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()>()",
+            "sink": "virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r13.<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()>()",
+            "sink": "virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r13.<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()>()",
+            "sink": "virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r13.<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()>()",
+            "sink": "virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        }
+    ],
+    "unExpected": [
+        {
+            "source": "$r4 = virtualinvoke $r13.<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()>()",
+            "sink": "virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r13.<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()>()",
+            "sink": "virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        }
+    ]
+}

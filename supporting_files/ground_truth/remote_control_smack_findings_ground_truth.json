@@ -1,0 +1,107 @@
+{
+    "expected": [
+        {
+            "source": "$r6 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>(\"network\")",
+            "sink": "virtualinvoke $r1.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r6)",
+            "sourceMethod": "public Location getLocation()",
+            "sinkMethod": "public void run()"
+        },
+        {
+            "source": "$r6 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>(\"gps\")",
+            "sink": "virtualinvoke $r1.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r6)",
+            "sourceMethod": "public Location getLocation()",
+            "sinkMethod": "public void run()"
+        },
+        {
+            "source": "$r10 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>($i1)",
+            "sink": "virtualinvoke $r1.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r5)",
+            "sourceMethod": "public void sms_saveFile()",
+            "sinkMethod": "public void sms_saveFile()"
+        },
+        {
+            "source": "$r11 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>($i1)",
+            "sink": "virtualinvoke $r1.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r5)",
+            "sourceMethod": "public void sms_saveFile()",
+            "sinkMethod": "public void sms_saveFile()"
+        },
+        {
+            "source": "$i1 = interfaceinvoke $r8.<android.database.Cursor: int getInt(int)>($i1)",
+            "sink": "virtualinvoke $r1.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r5)",
+            "sourceMethod": "public void sms_saveFile()",
+            "sinkMethod": "public void sms_saveFile()"
+        },
+        {
+            "source": "$l3 = interfaceinvoke $r8.<android.database.Cursor: long getLong(int)>($i2)",
+            "sink": "virtualinvoke $r1.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r5)",
+            "sourceMethod": "public void sms_saveFile()",
+            "sinkMethod": "public void sms_saveFile()"
+        },
+        {
+            "source": "$r7 = interfaceinvoke $r11.<android.database.Cursor: java.lang.String getString(int)>(0)",
+            "sink": "virtualinvoke $r2.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r7)",
+            "sourceMethod": "public void call_saveFile()",
+            "sinkMethod": "public void call_saveFile()"
+        },
+        {
+            "source": "$r13 = interfaceinvoke $r11.<android.database.Cursor: java.lang.String getString(int)>(1)",
+            "sink": "virtualinvoke $r2.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r7)",
+            "sourceMethod": "public void call_saveFile()",
+            "sinkMethod": "public void call_saveFile()"
+        },
+        {
+            "source": "$i1 = interfaceinvoke $r11.<android.database.Cursor: int getInt(int)>(2)",
+            "sink": "virtualinvoke $r2.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r7)",
+            "sourceMethod": "public void call_saveFile()",
+            "sinkMethod": "public void call_saveFile()"
+        },
+        {
+            "source": "$r15 = interfaceinvoke $r11.<android.database.Cursor: java.lang.String getString(int)>(3)",
+            "sink": "virtualinvoke $r2.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r7)",
+            "sourceMethod": "public void call_saveFile()",
+            "sinkMethod": "public void call_saveFile()"
+        },
+        {
+            "source": "$r10 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>($i0)",
+            "sink": "virtualinvoke $r2.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r10)",
+            "sourceMethod": "public void contacts_saveFile()",
+            "sinkMethod": "public void contacts_saveFile()"
+        },
+        {
+            "source": "$r8 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>($i0)",
+            "sink": "virtualinvoke $r2.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r10)",
+            "sourceMethod": "public void contacts_saveFile()",
+            "sinkMethod": "public void contacts_saveFile()"
+        },
+        {
+            "source": "$r12 = interfaceinvoke $r10.<android.database.Cursor: java.lang.String getString(int)>(0)",
+            "sink": "virtualinvoke $r2.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r6)",
+            "sourceMethod": "public void Calendar_saveFile()",
+            "sinkMethod": "public void Calendar_saveFile()"
+        },
+        {
+            "source": "$r13 = interfaceinvoke $r10.<android.database.Cursor: java.lang.String getString(int)>(1)",
+            "sink": "virtualinvoke $r2.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r6)",
+            "sourceMethod": "public void Calendar_saveFile()",
+            "sinkMethod": "public void Calendar_saveFile()"
+        },
+        {
+            "source": "$r14 = interfaceinvoke $r10.<android.database.Cursor: java.lang.String getString(int)>(2)",
+            "sink": "virtualinvoke $r2.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r6)",
+            "sourceMethod": "public void Calendar_saveFile()",
+            "sinkMethod": "public void Calendar_saveFile()"
+        },
+        {
+            "source": "$l1 = interfaceinvoke $r10.<android.database.Cursor: long getLong(int)>(4)",
+            "sink": "virtualinvoke $r2.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r6)",
+            "sourceMethod": "public void Calendar_saveFile()",
+            "sinkMethod": "public void Calendar_saveFile()"
+        },
+        {
+            "source": "$r18 = interfaceinvoke $r10.<android.database.Cursor: java.lang.String getString(int)>(5)",
+            "sink": "virtualinvoke $r2.<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>($r6)",
+            "sourceMethod": "public void Calendar_saveFile()",
+            "sinkMethod": "public void Calendar_saveFile()"
+        }
+    ],
+    "unExpected": []
+}

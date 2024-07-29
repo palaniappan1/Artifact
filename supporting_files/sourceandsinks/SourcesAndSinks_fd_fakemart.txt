@@ -1,0 +1,3 @@
+<android.telephony.gsm.SmsMessage: android.telephony.gsm.SmsMessage createFromPdu(byte[])> -> _SOURCE_
+
+<java.net.URLConnection: java.io.InputStream getInputStream()> -> _SINK_

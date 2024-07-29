@@ -1,0 +1,7 @@
+<android.content.Context: java.lang.Object getSystemService(java.lang.String)> -> _SOURCE_
+<android.database.Cursor: java.lang.String getString(int)> -> _SOURCE_
+<android.telephony.gsm.SmsMessage: android.telephony.gsm.SmsMessage createFromPdu(byte[])> -> _SOURCE_
+
+<com.android.tools.system.MyPostRequest: android.os.AsyncTask execute(java.lang.Object[])> -> _SINK_
+<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])> -> _SINK_
+<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_

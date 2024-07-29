@@ -1,0 +1,6 @@
+<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)> -> _SOURCE_
+<android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getLine1Number()> -> _SOURCE_
+
+<java.io.OutputStream: void write(byte[])> -> _SINK_
+<java.io.PrintWriter: void println(java.lang.String)> -> _SINK_

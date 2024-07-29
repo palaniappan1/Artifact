@@ -1,0 +1,6 @@
+<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)> -> _SOURCE_
+<java.io.FileInputStream: void <init>(java.lang.String)> -> _SOURCE_
+
+<java.io.BufferedWriter: void write(java.lang.String)> -> _SINK_
+<java.io.DataOutputStream: void write(byte[],int,int)> -> _SINK_
+<javax.mail.Transport: void sendMessage(javax.mail.Message,javax.mail.Address[])> -> _SINK_

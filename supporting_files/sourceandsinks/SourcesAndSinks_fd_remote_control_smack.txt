@@ -1,0 +1,6 @@
+<android.database.Cursor: int getInt(int)> -> _SOURCE_
+<android.database.Cursor: java.lang.String getString(int)> -> _SOURCE_
+<android.database.Cursor: long getLong(int)> -> _SOURCE_
+<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)> -> _SOURCE_
+
+<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)> -> _SINK_

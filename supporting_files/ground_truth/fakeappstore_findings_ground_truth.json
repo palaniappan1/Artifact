@@ -1,0 +1,23 @@
+{
+    "expected": [
+        {
+            "source": "$r5 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r4, null, null, null, null)",
+            "sink": "virtualinvoke $r3.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r1, null, $r2, null, null)",
+            "sourceMethod": "public void contacts4SMS(String content)",
+            "sinkMethod": "private void sendSMS(String num, String content)"
+        },
+        {
+            "source": "$r14 = interfaceinvoke $r13.<org.apache.http.HttpEntity: java.io.InputStream getContent()>()",
+            "sink": "virtualinvoke $r3.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r1, null, $r2, null, null)",
+            "sourceMethod": "public String doInBackground(String... params)",
+            "sinkMethod": "private void sendSMS(String num, String content)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r12 = interfaceinvoke $r3.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r7)",
+            "sourceMethod": "public static String getDevice(Context context)",
+            "sinkMethod": "public String doInBackground(String... params)"
+        }
+    ],
+    "unExpected": []
+}

@@ -1,0 +1,3 @@
+<android.telephony.TelephonyManager: java.lang.String getDeviceId()> -> _SOURCE_
+
+<java.net.HttpURLConnection: void connect()> -> _SINK_

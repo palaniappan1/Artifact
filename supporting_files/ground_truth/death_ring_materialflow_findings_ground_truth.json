@@ -1,0 +1,11 @@
+{
+    "expected": [
+        {
+            "source": "$r7 = virtualinvoke $r4.<android.telephony.gsm.SmsMessage: java.lang.String getDisplayMessageBody()>()",
+            "sink": "virtualinvoke $r2.<android.telephony.gsm.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r0, null, $r1, null, null)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public static void send2(String phoneNumber, String msmStr)"
+        }
+    ],
+    "unExpected": []
+}

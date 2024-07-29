@@ -1,0 +1,35 @@
+{
+    "expected": [
+        {
+            "source": "$r3 = virtualinvoke $r0.<com.example.bankmanager.BankActivity: android.view.View findViewById(int)>(2131230736)",
+            "sink": "$r10 = virtualinvoke $r8.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public JSONObject makeHttpRequest(String url, String method, List<NameValuePair> params)"
+        },
+        {
+            "source": "$r7 = virtualinvoke $r6.<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()>()",
+            "sink": "$r10 = virtualinvoke $r8.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public static byte[] sendGetRequest(String path, Map<String, String> params, String enc)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r10.<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()>()",
+            "sink": "$r10 = virtualinvoke $r8.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public String doInBackground(String... args)",
+            "sinkMethod": "public JSONObject makeHttpRequest(String url, String method, List<NameValuePair> params)"
+        },
+        {
+            "source": "$r7 = virtualinvoke $r12.<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()>()",
+            "sink": "$r7 = interfaceinvoke $r1.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r2)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void run()"
+        },
+        {
+            "source": "specialinvoke $r12.<java.io.File: void <init>(java.lang.String)>(\"/sdcard/apk/hannanbank.apk\")",
+            "sink": "virtualinvoke $r0.<com.example.service.InstallService: void startActivity(android.content.Intent)>($r2)",
+            "sourceMethod": "private void removeApplications()",
+            "sinkMethod": "private void installApk(String filename)"
+        }
+    ],
+    "unExpected": []
+}

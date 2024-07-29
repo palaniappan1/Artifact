@@ -1,0 +1,5 @@
+<android.content.Intent: java.io.Serializable getSerializableExtra(java.lang.String)> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getDeviceId()> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getLine1Number()> -> _SOURCE_
+
+<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_

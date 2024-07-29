@@ -1,0 +1,7 @@
+<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getSubscriberId()> -> _SOURCE_
+<java.net.HttpURLConnection: java.io.InputStream getInputStream()> -> _SOURCE_
+
+<android.content.SharedPreferences$Editor: boolean commit()> -> _SINK_
+<android.telephony.gsm.SmsManager: void sendMultipartTextMessage(java.lang.String,java.lang.String,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList)> -> _SINK_
+<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_

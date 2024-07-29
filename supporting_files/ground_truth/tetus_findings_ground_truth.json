@@ -1,0 +1,17 @@
+{
+    "expected": [
+        {
+            "source": "$r1 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r5.<java.net.HttpURLConnection: void connect()>()",
+            "sourceMethod": "public void initParams()",
+            "sinkMethod": "public static String postData2(String args)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r5.<java.net.HttpURLConnection: void connect()>()",
+            "sourceMethod": "public void run()",
+            "sinkMethod": "public static String postData2(String args)"
+        }
+    ],
+    "unExpected": []
+}

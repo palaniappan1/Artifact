@@ -1,0 +1,5 @@
+<android.os.Environment: java.io.File getExternalStorageDirectory()> -> _SOURCE_
+<java.io.File: void <init>(java.lang.String)> -> _SOURCE_
+
+<java.io.File: java.lang.String getName()> -> _SINK_
+<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class,java.lang.Object[])> -> _SINK_

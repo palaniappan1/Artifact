@@ -1,0 +1,41 @@
+{
+    "expected": [
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()",
+            "sink": "$r6 = virtualinvoke $r5.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public static String postData(String url, List<NameValuePair> params)"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r6 = virtualinvoke $r5.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public static String postData(String url, List<NameValuePair> params)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r1.<android.content.Intent: java.io.Serializable getSerializableExtra(java.lang.String)>(\"pdus\")",
+            "sink": "$r6 = virtualinvoke $r5.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "private final SmsMessage[] getMessagesFromIntent(Intent intent)",
+            "sinkMethod": "public static String postData(String url, List<NameValuePair> params)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r1.<android.content.Intent: java.io.Serializable getSerializableExtra(java.lang.String)>(\"pdus\")",
+            "sink": "$r6 = virtualinvoke $r5.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "private final SmsMessage[] getMessagesFromIntent(Intent intent)",
+            "sinkMethod": "public static String postData(String url, List<NameValuePair> params)"
+        },
+        {
+            "source": "$r8 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()",
+            "sink": "$r6 = virtualinvoke $r5.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void onReceive(Context arg0, Intent arg1)",
+            "sinkMethod": "public static String postData(String url, List<NameValuePair> params)"
+        },
+        {
+            "source": "$r8 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r6 = virtualinvoke $r5.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void onReceive(Context arg0, Intent arg1)",
+            "sinkMethod": "public static String postData(String url, List<NameValuePair> params)"
+        }
+    ],
+    "unExpected": []
+}

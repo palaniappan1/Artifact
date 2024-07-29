@@ -1,0 +1,10 @@
+<android.content.Intent: java.lang.String getStringExtra(java.lang.String)> -> _SOURCE_
+<android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getDeviceId()> -> _SOURCE_
+<java.io.FileInputStream: void <init>(java.io.File)> -> _SOURCE_
+<java.lang.Class: java.lang.reflect.Method getDeclaredMethod(java.lang.String,java.lang.Class[])> -> _SOURCE_
+
+<android.content.Context: android.content.ComponentName startService(android.content.Intent)> -> _SINK_
+<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)> -> _SINK_
+<java.io.DataOutputStream: void flush()> -> _SINK_
+<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])> -> _SINK_

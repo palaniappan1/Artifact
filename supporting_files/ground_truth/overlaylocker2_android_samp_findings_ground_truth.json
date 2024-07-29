@@ -1,0 +1,120 @@
+{
+    "expected": [
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r3.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r8, \"MeSetting\")",
+            "sourceMethod": "public String imei()",
+            "sinkMethod": "public int onStartCommand(Intent intent, int flags, int startId)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r3.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r9, \"MeSystem\")",
+            "sourceMethod": "public static TelephonyInfo getInstance(Context context)",
+            "sinkMethod": "public int onStartCommand(Intent intent, int flags, int startId)"
+        },
+        {
+            "source": "$r7 = virtualinvoke $r5.<java.lang.Class: java.lang.reflect.Method getDeclaredMethod(java.lang.String,java.lang.Class[])>(\"getService\", $r6)",
+            "sink": "$r9 = virtualinvoke $r7.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>(null, $r8)",
+            "sourceMethod": "public boolean sendSMS(int simID, String toNum, String smsText)",
+            "sinkMethod": "public boolean sendSMS(int simID, String toNum, String smsText)"
+        },
+        {
+            "source": "$r7 = virtualinvoke $r5.<java.lang.Class: java.lang.reflect.Method getDeclaredMethod(java.lang.String,java.lang.Class[])>(\"asInterface\", $r6)",
+            "sink": "virtualinvoke $r7.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>($r9, $r8)",
+            "sourceMethod": "public boolean sendSMS(int simID, String toNum, String smsText)",
+            "sinkMethod": "public boolean sendSMS(int simID, String toNum, String smsText)"
+        },
+        {
+            "source": "specialinvoke $r4.<java.io.FileInputStream: void <init>(java.io.File)>($r7)",
+            "sink": "virtualinvoke $r5.<java.io.DataOutputStream: void flush()>()",
+            "sourceMethod": "public void file2url(String file, String urlo)",
+            "sinkMethod": "public void file2url(String file, String urlo)"
+        },
+        {
+            "source": "specialinvoke $r1.<java.io.FileInputStream: void <init>(java.io.File)>($r2)",
+            "sink": "virtualinvoke $r3.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r10, \"MeFile\")",
+            "sourceMethod": "public static String read(String filePath)",
+            "sinkMethod": "public int onStartCommand(Intent intent, int flags, int startId)"
+        },
+        {
+            "source": "$r18 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r17)",
+            "sink": "virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent2)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent2)"
+        }
+    ],
+    "unExpected": [
+        {
+            "source": "$r6 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r10, \"MeSetting\")",
+            "sourceMethod": "public static String getUniqueID(Context context)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r6 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r11, \"MeSystem\")",
+            "sourceMethod": "public static String getUniqueID(Context context)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r6 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r12, \"MeFile\")",
+            "sourceMethod": "public static String getUniqueID(Context context)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r6 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r13, \"MePackage\")",
+            "sourceMethod": "public static String getUniqueID(Context context)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r6 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r14, \"MeContent\")",
+            "sourceMethod": "public static String getUniqueID(Context context)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r6 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r15, \"MeAction\")",
+            "sourceMethod": "public static String getUniqueID(Context context)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"url\")",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r10, \"MeSetting\")",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"url\")",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r11, \"MeSystem\")",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"url\")",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r12, \"MeFile\")",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"url\")",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r13, \"MePackage\")",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"url\")",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r14, \"MeContent\")",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"url\")",
+            "sink": "virtualinvoke $r8.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r15, \"MeAction\")",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        }
+    ]
+}

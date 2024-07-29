@@ -1,0 +1,42 @@
+{
+    "expected": [
+        {
+            "source": "$r3 = virtualinvoke $r0.<exts.whats.activities.Cards: android.view.View findViewById(int)>(2131492880)",
+            "sink": "virtualinvoke $r0.<exts.whats.activities.Cards: android.content.ComponentName startService(android.content.Intent)>($r3)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void sendData()"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r1.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"data\")",
+            "sink": "$r6 = virtualinvoke $r0.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public void onHandleIntent(Intent intent)",
+            "sinkMethod": "public static JSONObject request(DefaultHttpClient httpClient, String serverURL, String data)"
+        },
+        {
+            "source": "$r2 = virtualinvoke $r0.<android.content.Intent: android.os.Bundle getExtras()>()",
+            "sink": "virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2)",
+            "sourceMethod": "private static Map<String, String> retrieveMessages(Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r10 = virtualinvoke $r1.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"text\")",
+            "sink": "$r6 = virtualinvoke $r0.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public void onHandleIntent(Intent intent)",
+            "sinkMethod": "public static JSONObject request(DefaultHttpClient httpClient, String serverURL, String data)"
+        }
+    ],
+    "unExpected": [
+        {
+            "source": "$r2 = virtualinvoke $r1.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"package\")",
+            "sink": "virtualinvoke $r0.<exts.whats.activities.Cards: android.content.ComponentName startService(android.content.Intent)>($r3)",
+            "sourceMethod": "public void onNewIntent(Intent intent)",
+            "sinkMethod": "public void sendData()"
+        },
+        {
+            "source": "$r7 = virtualinvoke $r6.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"package\")",
+            "sink": "virtualinvoke $r0.<exts.whats.activities.Cards: android.content.ComponentName startService(android.content.Intent)>($r3)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void sendData()"
+        }
+    ]
+}

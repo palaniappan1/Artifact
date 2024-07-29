@@ -1,0 +1,5 @@
+<android.content.Intent: java.lang.String getStringExtra(java.lang.String)> -> _SOURCE_
+<com.google.elements.Utils: java.lang.String getDeviceId()> -> _SOURCE_
+
+<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)> -> _SINK_
+<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_

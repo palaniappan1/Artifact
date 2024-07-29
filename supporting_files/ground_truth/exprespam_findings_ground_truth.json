@@ -1,0 +1,17 @@
+{
+    "expected": [
+        {
+            "source": "$r6 = virtualinvoke $r5.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()",
+            "sink": "$r7 = virtualinvoke $r3.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r5)",
+            "sourceMethod": "public void run()",
+            "sinkMethod": "public String doPost(String url, String params)"
+        },
+        {
+            "source": "$r10 = virtualinvoke $r3.<frhfsd.siksdk.ujdsfjkfsd.WrehifsdkjsActivity: android.database.Cursor managedQuery(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, null, $r5, null, null)",
+            "sink": "$r7 = virtualinvoke $r3.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r5)",
+            "sourceMethod": "public ArrayList<String> getAddress()",
+            "sinkMethod": "public String doPost(String url, String params)"
+        }
+    ],
+    "unExpected": []
+}

@@ -1,0 +1,23 @@
+{
+    "expected": [
+        {
+            "source": "$r10 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r9)",
+            "sink": "$r5 = interfaceinvoke $r7.<org.mozilla.javascript.Function: java.lang.Object call(org.mozilla.javascript.Context,org.mozilla.javascript.Scriptable,org.mozilla.javascript.Scriptable,java.lang.Object[])>($r10, $r4, $r3, $r2)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public Object call(String funcName, Object[] args)"
+        },
+        {
+            "source": "$r3 = virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r3.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r10, \"xAPI\")",
+            "sourceMethod": "public String[] getTelephonyInfo()",
+            "sinkMethod": "public void onCreate(Bundle icicle)"
+        },
+        {
+            "source": "$r6 = virtualinvoke $r4.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r5, null, null, null, null)",
+            "sink": "virtualinvoke $r3.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r10, \"xAPI\")",
+            "sourceMethod": "public ArrayList<PhoneContact> getContacts()",
+            "sinkMethod": "public void onCreate(Bundle icicle)"
+        }
+    ],
+    "unExpected": []
+}

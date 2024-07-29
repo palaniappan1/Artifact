@@ -1,0 +1,30 @@
+{
+    "expected": [
+        {
+            "source": "$r11 = virtualinvoke $r10.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()",
+            "sink": "virtualinvoke $r4.<java.io.PrintWriter: void write(java.lang.String)>($r11)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void onCreate(Bundle savedInstanceState)"
+        },
+        {
+            "source": "$r16 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r15)",
+            "sink": "virtualinvoke $r5.<java.io.PrintWriter: void write(java.lang.String)>($r17)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        }
+    ],
+    "unExpected": [
+        {
+            "source": "virtualinvoke $r10.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()",
+            "sink": "virtualinvoke $r5.<java.io.PrintWriter: void write(java.lang.String)>($r17)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        },
+        {
+            "source": "$r17 = virtualinvoke $r10.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()",
+            "sink": "virtualinvoke $r5.<java.io.PrintWriter: void write(java.lang.String)>($r17)",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public void onReceive(Context context, Intent intent)"
+        }
+    ]
+}

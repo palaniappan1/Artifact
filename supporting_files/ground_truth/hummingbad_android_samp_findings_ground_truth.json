@@ -1,0 +1,17 @@
+{
+    "expected": [
+        {
+            "source": "$r11 = interfaceinvoke $r9.<android.database.Cursor: java.lang.String getString(int)>($i0)",
+            "sink": "$l1 = virtualinvoke $r6.<android.database.sqlite.SQLiteDatabase: long insert(java.lang.String,java.lang.String,android.content.ContentValues)>(\"tb_dubai_adv\", null, $r2)",
+            "sourceMethod": "private static ArrayList<DuAdData> listDuAdDatasFromAppCache(Context context)",
+            "sinkMethod": "public long insertAd(DuAd ad)"
+        },
+        {
+            "source": "$r11 = interfaceinvoke $r9.<android.database.Cursor: java.lang.String getString(int)>($i0)",
+            "sink": "virtualinvoke $r6.<android.database.sqlite.SQLiteDatabase: int update(java.lang.String,android.content.ContentValues,java.lang.String,java.lang.String[])>(\"tb_dubai_adv\", $r2, \"_ID = ?\", $r7)",
+            "sourceMethod": "private static ArrayList<DuAdData> listDuAdDatasFromAppCache(Context context)",
+            "sinkMethod": "public void updateAdById(long id, DuAd ad)"
+        }
+    ],
+    "unExpected": []
+}

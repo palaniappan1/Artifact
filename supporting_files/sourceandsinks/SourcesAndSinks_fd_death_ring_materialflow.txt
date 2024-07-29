@@ -1,0 +1,3 @@
+<android.telephony.gsm.SmsMessage: java.lang.String getDisplayMessageBody()> -> _SOURCE_
+
+<android.telephony.gsm.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)> -> _SINK_

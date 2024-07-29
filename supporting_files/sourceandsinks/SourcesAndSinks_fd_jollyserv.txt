@@ -1,0 +1,3 @@
+<android.telephony.TelephonyManager: java.lang.String getDeviceId()> -> _SOURCE_
+
+<java.util.concurrent.ThreadPoolExecutor: java.util.concurrent.Future submit(java.lang.Runnable)> -> _SINK_

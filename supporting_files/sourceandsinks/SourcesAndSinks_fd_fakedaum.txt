@@ -1,0 +1,4 @@
+<android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()> -> _SOURCE_
+
+<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_

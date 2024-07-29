@@ -1,0 +1,192 @@
+{
+    "expected": [
+        {
+            "source": "$r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>()",
+            "sink": "virtualinvoke $r5.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>(\"user_name\", $r2)",
+            "sourceMethod": "public void onClick(View v)",
+            "sinkMethod": "public void putInformation(DatabaseOperationslogin dop, String name, String number, String pass)"
+        },
+        {
+            "source": "$r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>()",
+            "sink": "virtualinvoke $r5.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>(\"user_number\", $r3)",
+            "sourceMethod": "public void onClick(View v)",
+            "sinkMethod": "public void putInformation(DatabaseOperationslogin dop, String name, String number, String pass)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>(\"reg_info\", $r2, null, null, null, null, null)",
+            "sink": "virtualinvoke $r7.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r5, null, $r6, null, null)",
+            "sourceMethod": "public Cursor getInformation(DatabaseOperations dop)",
+            "sinkMethod": "public void fetchContacts()"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>(\"reg_info\", $r2, null, null, null, null, null)",
+            "sink": "interfaceinvoke $r6.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r7)",
+            "sourceMethod": "public Cursor getInformation(DatabaseOperations dop)",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>(\"reg_info\", $r2, null, null, null, null, null)",
+            "sink": "interfaceinvoke $r6.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r7)",
+            "sourceMethod": "public Cursor getInformation(DatabaseOperations dop)",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r13.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()",
+            "sink": "interfaceinvoke $r6.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r7)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r10.<android.telephony.TelephonyManager: java.lang.String getSimCountryIso()>()",
+            "sink": "interfaceinvoke $r6.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r7)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>(\"reg_info3\", $r2, null, null, null, null, null)",
+            "sink": "interfaceinvoke $r5.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r6)",
+            "sourceMethod": "public Cursor getInformation(DatabaseOperationssmssave2 dop)",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>(\"reg_info3\", $r2, null, null, null, null, null)",
+            "sink": "interfaceinvoke $r5.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r6)",
+            "sourceMethod": "public Cursor getInformation(DatabaseOperationssmssave2 dop)",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>(\"reg_info3\", $r2, null, null, null, null, null)",
+            "sink": "interfaceinvoke $r5.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r6)",
+            "sourceMethod": "public Cursor getInformation(DatabaseOperationssmssave2 dop)",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>()",
+            "sink": "interfaceinvoke $r5.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r6)",
+            "sourceMethod": "public void onClick(View v)",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r7 = virtualinvoke $r6.<android.widget.EditText: android.text.Editable getText()>()",
+            "sink": "interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void onClick(View arg0)",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r8 = virtualinvoke $r13.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()",
+            "sink": "interfaceinvoke $r4.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r5)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r8 = virtualinvoke $r13.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()",
+            "sink": "interfaceinvoke $r3.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r8 = virtualinvoke $r13.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()",
+            "sink": "interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>(\"reg_info2\", $r2, null, null, null, null, null)",
+            "sink": "interfaceinvoke $r5.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r6)",
+            "sourceMethod": "public Cursor getInformation(DatabaseOperationssmssave dop)",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>(\"reg_info2\", $r2, null, null, null, null, null)",
+            "sink": "interfaceinvoke $r5.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r6)",
+            "sourceMethod": "public Cursor getInformation(DatabaseOperationssmssave dop)",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r8 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getSimCountryIso()>()",
+            "sink": "interfaceinvoke $r4.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r5)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r10 = virtualinvoke $r9.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()",
+            "sink": "$r9 = interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r8.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()",
+            "sink": "interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r13.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()",
+            "sink": "interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r8.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()",
+            "sink": "$r9 = interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r8.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()",
+            "sink": "$r10 = interfaceinvoke $r3.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"var2\")",
+            "sink": "virtualinvoke $r5.<com.savemebeta.Scan: void startActivity(android.content.Intent)>($r3)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void onClick(View arg0)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"var2\")",
+            "sink": "virtualinvoke $r5.<com.savemebeta.Scan: void startActivity(android.content.Intent)>($r3)",
+            "sourceMethod": "public void onCreate(Bundle savedInstanceState)",
+            "sinkMethod": "public void onClick(View arg0)"
+        }
+    ],
+    "unExpected": [
+        {
+            "source": "$r8 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getSimCountryIso()>()",
+            "sink": "interfaceinvoke $r3.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r8 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getSimCountryIso()>()",
+            "sink": "interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public Void doInBackground(Void... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>(\"reg_info\", $r2, null, null, null, null, null)",
+            "sink": "virtualinvoke $r5.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>(\"user_name\", $r2)",
+            "sourceMethod": "public Cursor getInformation(DatabaseOperations dop)",
+            "sinkMethod": "public void putInformation(DatabaseOperations dop, String name, String number, String pass)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>(\"reg_info\", $r2, null, null, null, null, null)",
+            "sink": "virtualinvoke $r5.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>(\"user_number\", $r3)",
+            "sourceMethod": "public Cursor getInformation(DatabaseOperations dop)",
+            "sinkMethod": "public void putInformation(DatabaseOperations dop, String name, String number, String pass)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>(\"reg_info\", $r2, null, null, null, null, null)",
+            "sink": "virtualinvoke $r5.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>(\"user_pass\", $r4)",
+            "sourceMethod": "public Cursor getInformation(DatabaseOperations dop)",
+            "sinkMethod": "public void putInformation(DatabaseOperations dop, String name, String number, String pass)"
+        },
+        {
+            "source": "$r9 = virtualinvoke $r8.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()",
+            "sink": "virtualinvoke $r7.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r5, null, $r6, null, null)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public void fetchContacts()"
+        }
+    ]
+}

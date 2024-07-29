@@ -1,0 +1,36 @@
+{
+    "expected": [
+        {
+            "source": "$r10 = virtualinvoke $r9.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r4.<java.io.DataOutputStream: void writeUTF(java.lang.String)>($r15)",
+            "sourceMethod": "public void log()",
+            "sinkMethod": "public void log()"
+        },
+        {
+            "source": "specialinvoke $r14.<java.io.FileInputStream: void <init>(java.lang.String)>($r15)",
+            "sink": "virtualinvoke $r4.<java.io.DataOutputStream: void write(byte[],int,int)>($r1, 0, $i4)",
+            "sourceMethod": "public void log()",
+            "sinkMethod": "public void log()"
+        }
+    ],
+    "unExpected": [
+        {
+            "source": "$r10 = virtualinvoke $r9.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r4.<java.io.DataOutputStream: void write(byte[],int,int)>($r1, 0, $i4)",
+            "sourceMethod": "public void log()",
+            "sinkMethod": "public void log()"
+        },
+        {
+            "source": "specialinvoke $r14.<java.io.FileInputStream: void <init>(java.lang.String)>($r15)",
+            "sink": "virtualinvoke $r4.<java.io.DataOutputStream: void writeUTF(java.lang.String)>($r15)",
+            "sourceMethod": "public void log()",
+            "sinkMethod": "public void log()"
+        },
+        {
+            "source": "specialinvoke $r14.<java.io.FileInputStream: void <init>(java.lang.String)>($r15)",
+            "sink": "virtualinvoke $r4.<java.io.DataOutputStream: void writeUTF(java.lang.String)>($r15)",
+            "sourceMethod": "public void log()",
+            "sinkMethod": "public void log()"
+        }
+    ]
+}

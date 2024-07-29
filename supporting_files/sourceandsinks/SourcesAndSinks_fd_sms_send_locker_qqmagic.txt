@@ -1,0 +1,5 @@
+<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()> -> _SOURCE_
+<android.telephony.SmsMessage: java.lang.String getDisplayOriginatingAddress()> -> _SOURCE_
+
+<android.content.Context: android.content.ComponentName startService(android.content.Intent)> -> _SINK_
+<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)> -> _SINK_

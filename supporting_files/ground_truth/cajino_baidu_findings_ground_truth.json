@@ -1,0 +1,96 @@
+{
+    "expected": [
+        {
+            "source": "$r5 = virtualinvoke $r2.<java.io.File: java.io.File[] listFiles()>()",
+            "sink": "$r9 = virtualinvoke $r0.<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>($r6)",
+            "sourceMethod": "public void run()",
+            "sinkMethod": "public static void putObjectByInputStream(BaiduBCS baiduBCS, String foldname, String filename)"
+        },
+        {
+            "source": "$r4 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>($i0)",
+            "sink": "virtualinvoke $r3.<java.io.FileWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "public void run()",
+            "sinkMethod": "public static void createContactFile(String fName, String content)"
+        },
+        {
+            "source": "$r8 = interfaceinvoke $r12.<android.database.Cursor: java.lang.String getString(int)>($i0)",
+            "sink": "virtualinvoke $r3.<java.io.FileWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "private static void getCallLog(Context context, String deviceID)",
+            "sinkMethod": "public static void createContactFile(String fName, String content)"
+        },
+        {
+            "source": "$r5 = interfaceinvoke $r9.<android.database.Cursor: java.lang.String getString(int)>(1)",
+            "sink": "virtualinvoke $r3.<java.io.FileWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "private static void getMessage(Context context, final String deviceID)",
+            "sinkMethod": "public static void createContactFile(String fName, String content)"
+        },
+        {
+            "source": "$r10 = virtualinvoke $r9.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>($r6)",
+            "sink": "virtualinvoke $r3.<java.io.FileWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "private static void getLocation(Context context, String deviceID)",
+            "sinkMethod": "public static void createContactFile(String fName, String content)"
+        },
+        {
+            "source": "$r7 = virtualinvoke $r5.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "virtualinvoke $r3.<java.io.FileWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "private static void getPhoneInfo(Context context)",
+            "sinkMethod": "public static void createContactFile(String fName, String content)"
+        },
+        {
+            "source": "$r7 = virtualinvoke $r5.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r9 = virtualinvoke $r0.<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>($r6)",
+            "sourceMethod": "private static void getPhoneInfo(Context context)",
+            "sinkMethod": "public static void putObjectByInputStream(BaiduBCS baiduBCS, String foldname, String filename)"
+        },
+        {
+            "source": "$r11 = virtualinvoke $r5.<java.io.File: java.io.File[] listFiles()>()",
+            "sink": "virtualinvoke $r3.<java.io.FileWriter: void write(java.lang.String)>($r1)",
+            "sourceMethod": "private static void listFileByPath(Context context, String filePath)",
+            "sinkMethod": "public static void createContactFile(String fName, String content)"
+        },
+        {
+            "source": "specialinvoke $r3.<java.io.File: void <init>(java.lang.String)>($r8)",
+            "sink": "$r9 = virtualinvoke $r0.<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>($r6)",
+            "sourceMethod": "private static void uploadByInputStream(BaiduBCS baiduBCS, String foldname, String filePath)",
+            "sinkMethod": "private static void uploadByInputStream(BaiduBCS baiduBCS, String foldname, String filePath)"
+        },
+        {
+            "source": "specialinvoke $r2.<java.io.File: void <init>(java.lang.String)>($r1)",
+            "sink": "virtualinvoke $r2.<java.io.File: boolean delete()>()",
+            "sourceMethod": "private static void deletFileByPath(Context context, String path)",
+            "sinkMethod": "private static void deletFileByPath(Context context, String path)"
+        },
+        {
+            "source": "specialinvoke $r3.<java.io.File: void <init>(java.lang.String)>($r8)",
+            "sink": "$r9 = virtualinvoke $r0.<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>($r6)",
+            "sourceMethod": "public static void putObjectByInputStream(BaiduBCS baiduBCS, String foldname, String filename)",
+            "sinkMethod": "public static void putObjectByInputStream(BaiduBCS baiduBCS, String foldname, String filename)"
+        },
+        {
+            "source": "specialinvoke $r1.<java.io.File: void <init>(java.lang.String)>($r0)",
+            "sink": "virtualinvoke $r1.<java.io.File: boolean delete()>()",
+            "sourceMethod": "public static void deletTempFile(String path)",
+            "sinkMethod": "public static void deletTempFile(String path)"
+        }
+    ],
+    "unExpected": [
+        {
+            "source": "$r4 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r9 = virtualinvoke $r0.<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>($r6)",
+            "sourceMethod": "private static void getIt(String filePath, Context context)",
+            "sinkMethod": "public static void putObjectByInputStream(BaiduBCS baiduBCS, String foldname, String filename)"
+        },
+        {
+            "source": "$r1 = virtualinvoke $r9.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r9 = virtualinvoke $r0.<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>($r6)",
+            "sourceMethod": "private static void listFileByPath(Context context, String filePath)",
+            "sinkMethod": "public static void putObjectByInputStream(BaiduBCS baiduBCS, String foldname, String filename)"
+        },
+        {
+            "source": "$r8 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()",
+            "sink": "$r9 = virtualinvoke $r0.<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>($r6)",
+            "sourceMethod": "private static void uploadFileByPath(Context context, String path)",
+            "sinkMethod": "private static void uploadByInputStream(BaiduBCS baiduBCS, String foldname, String filePath)"
+        }
+    ]
+}

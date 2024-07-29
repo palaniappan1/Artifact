@@ -1,0 +1,29 @@
+{
+    "expected": [
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r4, $r3, null, null, \"date desc\")",
+            "sink": "$r11 = virtualinvoke $r8.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "private String getSms()",
+            "sinkMethod": "public synchronized void run(String str, String str2)"
+        },
+        {
+            "source": "$d1 = virtualinvoke $r1.<android.location.Location: double getLongitude()>()",
+            "sink": "$r11 = virtualinvoke $r8.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "public void updateWithNewLocation(Location location)",
+            "sinkMethod": "public synchronized void run(String str, String str2)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r4, null, null, null)",
+            "sink": "$r11 = virtualinvoke $r8.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "private String getPhoneContacts()",
+            "sinkMethod": "public synchronized void run(String str, String str2)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r4, null, null, \"date DESC\")",
+            "sink": "$r11 = virtualinvoke $r8.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)",
+            "sourceMethod": "private String getRecord()",
+            "sinkMethod": "public synchronized void run(String str, String str2)"
+        }
+    ],
+    "unExpected": []
+}

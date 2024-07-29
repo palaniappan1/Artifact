@@ -1,0 +1,11 @@
+{
+    "expected": [
+        {
+            "source": "specialinvoke $r3.<java.io.File: void <init>(java.lang.String)>($r4)",
+            "sink": "virtualinvoke $r1.<android.content.Context: void startActivity(android.content.Intent)>($r2)",
+            "sourceMethod": "public void install(Context ctx)",
+            "sinkMethod": "public void install(Context ctx)"
+        }
+    ],
+    "unExpected": []
+}

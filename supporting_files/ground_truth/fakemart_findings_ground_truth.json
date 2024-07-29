@@ -1,0 +1,17 @@
+{
+    "expected": [
+        {
+            "source": "$r9 = staticinvoke <android.telephony.gsm.SmsMessage: android.telephony.gsm.SmsMessage createFromPdu(byte[])>($r8)",
+            "sink": "$r6 = virtualinvoke $r5.<java.net.URLConnection: java.io.InputStream getInputStream()>()",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public static synchronized String GetSourceURL(String urlsx)"
+        },
+        {
+            "source": "$r9 = staticinvoke <android.telephony.gsm.SmsMessage: android.telephony.gsm.SmsMessage createFromPdu(byte[])>($r8)",
+            "sink": "$r6 = virtualinvoke $r5.<java.net.URLConnection: java.io.InputStream getInputStream()>()",
+            "sourceMethod": "public void onReceive(Context context, Intent intent)",
+            "sinkMethod": "public static synchronized String GetSourceURL(String urlsx)"
+        }
+    ],
+    "unExpected": []
+}

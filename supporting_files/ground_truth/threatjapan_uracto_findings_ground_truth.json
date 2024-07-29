@@ -1,0 +1,17 @@
+{
+    "expected": [
+        {
+            "source": "$r14 = virtualinvoke $r12.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r13, null, null, null, null)",
+            "sink": "virtualinvoke $r9.<java.io.PrintWriter: java.io.PrintWriter append(java.lang.CharSequence)>($r15)",
+            "sourceMethod": "public void postMailList()",
+            "sinkMethod": "public void postMailList()"
+        },
+        {
+            "source": "specialinvoke $r3.<java.io.File: void <init>(java.lang.String)>($r16)",
+            "sink": "$r19 = virtualinvoke $r1.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r8)",
+            "sourceMethod": "public void postMailList()",
+            "sinkMethod": "public void postMailList()"
+        }
+    ],
+    "unExpected": []
+}

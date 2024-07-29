@@ -1,0 +1,29 @@
+{
+    "expected": [
+        {
+            "source": "$r5 = virtualinvoke $r4.<com.google.elements.Utils: java.lang.String getDeviceId()>()",
+            "sink": "$r7 = interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public void onCreate()",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r4 = virtualinvoke $r3.<com.google.elements.Utils: java.lang.String getDeviceId()>()",
+            "sink": "$r7 = interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r4)",
+            "sourceMethod": "public void run()",
+            "sinkMethod": "public String doInBackground(String... params)"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"data\")",
+            "sink": "virtualinvoke $r3.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r1, null, $r2, null, null)",
+            "sourceMethod": "public void onMessage(Context context, Intent intent)",
+            "sinkMethod": "public void run()"
+        },
+        {
+            "source": "$r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(\"data\")",
+            "sink": "virtualinvoke $r6.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r1, null, $r4, null, null)",
+            "sourceMethod": "public void onMessage(Context context, Intent intent)",
+            "sinkMethod": "public void sendMessageNow(String data)"
+        }
+    ],
+    "unExpected": []
+}

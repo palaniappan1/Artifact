@@ -1,0 +1,7 @@
+<android.content.Context: java.io.FileInputStream openFileInput(java.lang.String)> -> _SOURCE_
+<android.content.Intent: java.lang.String getStringExtra(java.lang.String)> -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getSimCountryIso()> -> _SOURCE_
+
+<java.io.DataOutputStream: void write(byte[],int,int)> -> _SINK_
+<java.io.OutputStreamWriter: void write(java.lang.String)> -> _SINK_
+<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()> -> _SINK_
