@@ -73,24 +73,24 @@ def evaluate_all_callgraph_algorithms_for_an_apk(apk_file_path, callgraph_algori
 
 
 def main():
-    # if len(sys.argv) > 1:
-    #     arguments = sys.argv[1:]
-    #     for arg in arguments:
-    #         apk_path = os.path.join(current_directory, '..', 'apk', 'taintbench_apks', arg)
-    #         print(f"Evaluating {apk_path}")
-    #         evaluate_all_callgraph_algorithms_for_an_apk(apk_path, allowed_configurations)
-    #
-    # else:
-    #     # Construct the path to the apks folder (assuming it's one level up from src)
-    #     apks_folder = os.path.join(current_directory, '..', 'apk', 'playstore_apks')
-    #     # Loop through all files in the apks folder
-    #     for filename in os.listdir(apks_folder):
-    #         file_path = os.path.join(apks_folder, filename)
-    #         if os.path.isfile(file_path) and os.path.splitext(file_path)[1] == '.apk':
-    #             print(f"Executing {os.path.basename(file_path)}")
-    #             evaluate_all_callgraph_algorithms_for_an_apk(file_path, allowed_configurations)
-    #
-    # aggregate_all_csv()
+    if len(sys.argv) > 1:
+        arguments = sys.argv[1:]
+        for arg in arguments:
+            apk_path = os.path.join(current_directory, '..', 'apk', 'playstore_apks', arg)
+            print(f"Evaluating {apk_path}")
+            evaluate_all_callgraph_algorithms_for_an_apk(apk_path, allowed_configurations)
+
+    else:
+        # Construct the path to the apks folder (assuming it's one level up from src)
+        apks_folder = os.path.join(current_directory, '..', 'apk', 'playstore_apks')
+        # Loop through all files in the apks folder
+        for filename in os.listdir(apks_folder):
+            file_path = os.path.join(apks_folder, filename)
+            if os.path.isfile(file_path) and os.path.splitext(file_path)[1] == '.apk':
+                print(f"Executing {os.path.basename(file_path)}")
+                evaluate_all_callgraph_algorithms_for_an_apk(file_path, allowed_configurations)
+
+    aggregate_all_csv()
     drawPlots()
 
 
