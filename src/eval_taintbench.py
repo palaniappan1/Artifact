@@ -3,8 +3,8 @@ import sys
 
 import CallGraphAlgorithms
 import os
-import csv
 import glob
+import Taintbench_Precision_Stats
 
 # Get the current directory of eval_py.py
 current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -139,7 +139,7 @@ def main():
             if os.path.isfile(file_path):
                 print(f"Executing {os.path.basename(file_path)}")
                 evaluate_all_callgraph_algorithms_for_an_apk(file_path, construct_callgraph_algorithms_list())
-    # parse_csv()
+    Taintbench_Precision_Stats.process_taintbench_results()
 
 
 if __name__ == "__main__":
