@@ -3,14 +3,11 @@ import subprocess
 import sys
 
 import CallGraphAlgorithms
-from src.eval_taintbench import is_soot_algorithm
-from src.aggregate_csv_files import aggregate_all_csv
-from draw_plots import drawPlots
 
 # Get the current directory of eval_py.py
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
-allowed_configurations = ['CHA', 'RTA', 'VTA', 'SPARK', 's-2c', 'M-2o', 'Z-2o', 'T-1o']
+allowed_configurations = ['CHA', 'RTA', 'VTA', 'SPARK', 's-2c', '2t', 'Z-2o', '2h']
 
 # Will be unchanged throughout the evaluation
 platform_location = os.path.join(current_directory, '..', 'supporting_files/platforms')
@@ -33,6 +30,12 @@ def execute_jar(program_arguments):
         print(f"Error: {e}")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+
+def is_soot_algorithm(algorithm_to_check):
+    for algorithm in CallGraphAlgorithms.CallgraphAlgorithm:
+        if algorithm.value == algorithm_to_check:
+            return True
+    return False
 
 
 def construct_arguments(callgraph_algorithm, apk_location, qilin_pta):
