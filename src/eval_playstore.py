@@ -26,7 +26,7 @@ ground_truth_file = os.path.join(current_directory, '..', 'supporting_files/tain
 
 
 def execute_jar(program_arguments):
-    command = ["java", "-cp", flowdroid_jar_path, mainClass] + program_arguments
+    command = ["java", "-Xmx200g", "-Xss1g", "-cp", flowdroid_jar_path, mainClass] + program_arguments
     try:
         subprocess.run(command, check=True)
     except subprocess.CalledProcessError as e:
@@ -90,8 +90,8 @@ def main():
                 print(f"Executing {os.path.basename(file_path)}")
                 evaluate_all_callgraph_algorithms_for_an_apk(file_path, allowed_configurations)
 
-    aggregate_all_csv()
-    drawPlots()
+    # aggregate_all_csv()
+    # drawPlots()
 
 
 if __name__ == "__main__":
