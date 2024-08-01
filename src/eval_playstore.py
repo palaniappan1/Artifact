@@ -13,6 +13,7 @@ allowed_configurations = ['CHA', 'RTA', 'VTA', 'SPARK', 's-2c', '2t', 'Z-2o', '2
 platform_location = os.path.join(current_directory, '..', 'supporting_files/platforms')
 flowdroid_jar_path = os.path.join(current_directory, '..',
                                   'supporting_files/soot-infoflow-cmd-jar-with-dependencies.jar')
+flowdroid_jar_path_soot = os.path.join(current_directory, '..', 'supporting_files/soot-infoflow-cmd-jar-with-dependencies-soot.jar')
 mainClass = "soot.jimple.infoflow.cmd.MainClass"
 
 # Changes to be made in these arguments
@@ -22,8 +23,10 @@ source_sink_text_file = os.path.join(current_directory, '..', 'supporting_files/
 ground_truth_file = os.path.join(current_directory, '..', 'supporting_files/taintbench_results.json')
 
 
-def execute_jar(program_arguments):
-    command = ["java", "-Xmx200g", "-Xss1g", "-cp", flowdroid_jar_path, mainClass] + program_arguments
+def execute_jar(program_arguments, jar_path):
+    # Set the timeout to 5 hours
+    timeout_seconds = 5 * 60 * 60
+    command = ["java","-XX:+UseG1GC", "-XX:+UseAdaptiveSizePolicy", "-Xmx200g", "-Xss1g", "-cp", jar_path, mainClass] + program_arguments
     try:
         subprocess.run(command, check=True)
     except subprocess.CalledProcessError as e:
@@ -63,15 +66,17 @@ def evaluate_all_callgraph_algorithms_for_an_apk(apk_file_path, callgraph_algori
             if algorithm != CallGraphAlgorithms.CallgraphAlgorithm.QILIN.value:
                 if is_soot_algorithm(algorithm):
                     callgraph_algorithm = algorithm
+                    jar_file_path = flowdroid_jar_path_soot
                 else:
                     callgraph_algorithm = CallGraphAlgorithms.CallgraphAlgorithm.QILIN.value
                     qilin_pta = algorithm
+                    jar_file_path = flowdroid_jar_path
                 print(
                     f"Executing {os.path.basename(apk_file_path)} with {algorithm}, iteration {number} out of {total_iterations} iterations")
                 number = number + 1
                 iteration = iteration + 1
                 execute_jar(
-                    list(map(str, construct_arguments(callgraph_algorithm, apk_file_path, qilin_pta)))
+                    list(map(str, construct_arguments(callgraph_algorithm, apk_file_path, qilin_pta))), jar_file_path
                 )
 
 
