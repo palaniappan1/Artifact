@@ -1,6 +1,7 @@
 import os
 import subprocess
 import sys
+import csv
 
 import CallGraphAlgorithms
 
@@ -13,7 +14,8 @@ allowed_configurations = ['CHA', 'RTA', 'VTA', 'SPARK', 's-2c', '2t', 'Z-2o', '2
 platform_location = os.path.join(current_directory, '..', 'supporting_files/platforms')
 flowdroid_jar_path = os.path.join(current_directory, '..',
                                   'supporting_files/soot-infoflow-cmd-jar-with-dependencies.jar')
-flowdroid_jar_path_soot = os.path.join(current_directory, '..', 'supporting_files/soot-infoflow-cmd-jar-with-dependencies-soot.jar')
+flowdroid_jar_path_soot = os.path.join(current_directory, '..',
+                                       'supporting_files/soot-infoflow-cmd-jar-with-dependencies-soot.jar')
 mainClass = "soot.jimple.infoflow.cmd.MainClass"
 
 # Changes to be made in these arguments
@@ -21,24 +23,60 @@ k_configuration = 2
 output_directory = os.path.join(current_directory, '..', 'results/playstore_results')
 source_sink_text_file = os.path.join(current_directory, '..', 'supporting_files/SourcesAndSinks.txt')
 ground_truth_file = os.path.join(current_directory, '..', 'supporting_files/taintbench_results.json')
+exception_file_name = os.path.join(current_directory, '..', 'results/playstore_results/exceptions.csv')
 
 
 def execute_jar(program_arguments, jar_path):
     # Set the timeout to 5 hours
     timeout_seconds = 5 * 60 * 60
-    command = ["java","-XX:+UseG1GC", "-XX:+UseAdaptiveSizePolicy", "-Xmx200g", "-Xss1g", "-cp", jar_path, mainClass] + program_arguments
+    command = ["java", "-XX:+UseG1GC", "-XX:+UseAdaptiveSizePolicy", "-Xmx200g", "-Xss1g", "-cp", jar_path,
+               mainClass] + program_arguments
     try:
-        subprocess.run(command, check=True)
+        subprocess.run(command, check=True, timeout=timeout_seconds)
+    except subprocess.TimeoutExpired:
+        app_name, cg_name = get_arguments_value(command)
+        write_to_csv(app_name, cg_name, "TOE")
     except subprocess.CalledProcessError as e:
+        app_name, cg_name = get_arguments_value(command)
+        write_to_csv(app_name, cg_name, "RE")
         print(f"Error: {e}")
     except Exception as e:
+        app_name, cg_name = get_arguments_value(command)
+        write_to_csv(app_name, cg_name, "RE")
         print(f"An unexpected error occurred: {e}")
+
 
 def is_soot_algorithm(algorithm_to_check):
     for algorithm in CallGraphAlgorithms.CallgraphAlgorithm:
         if algorithm.value == algorithm_to_check:
             return True
     return False
+
+
+def get_arguments_value(args):
+    app_name = next(args[i + 1] for i, arg in enumerate(args) if arg == '-a')
+    app_name = os.path.basename(app_name)
+    cg_name = next(
+        (args[i + 1] for i, arg in enumerate(args) if arg == '-qilin_pta'),
+        next((args[i + 1] for i, arg in enumerate(args) if arg == '-cg'), None)
+    )
+    return app_name, cg_name
+
+
+def write_to_csv(app_name, cg_name, reason):
+    file_exists = os.path.isfile(exception_file_name)
+
+    # Open the file in append mode ('a')
+    with open(exception_file_name, 'a', newline='') as csvfile:
+        fieldnames = ['app_name', 'cg_name', 'reason']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        # Write the header if the file does not exist
+        if not file_exists:
+            writer.writeheader()
+
+        # Write the data
+        writer.writerow({'app_name': app_name, 'cg_name': cg_name, 'reason': reason})
 
 
 def construct_arguments(callgraph_algorithm, apk_location, qilin_pta):
