@@ -28,11 +28,11 @@ exception_file_name = os.path.join(current_directory, '..', 'results/playstore_r
 
 def execute_jar(program_arguments, jar_path):
     # Set the timeout to 5 hours
-    timeout_seconds = 5 * 60 * 60
+    # timeout_seconds = 5 * 60 * 60
     command = ["java", "-XX:+UseG1GC", "-XX:+UseAdaptiveSizePolicy", "-Xmx200g", "-Xss1g", "-cp", jar_path,
                mainClass] + program_arguments
     try:
-        subprocess.run(command, check=True, timeout=timeout_seconds)
+        subprocess.run(command, check=True)
     except subprocess.TimeoutExpired:
         app_name, cg_name = get_arguments_value(command)
         write_to_csv(app_name, cg_name, "TOE")
@@ -87,6 +87,7 @@ def construct_arguments(callgraph_algorithm, apk_location, qilin_pta):
         '-r_j', ground_truth_file,
         '-cg', callgraph_algorithm,
         '-o', output_directory,
+        '-dt', 5 * 60 * 60,
         '-d'
     ]
     if callgraph_algorithm == "QILIN":
