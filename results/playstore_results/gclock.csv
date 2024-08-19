@@ -1,0 +1,4 @@
+num_of_methods_propagated,expected_leaks,ground_truth,analysis_time,cg_edges,analysis_memory,stmts_propagated,reachable_methods,app_name,no_of_leaks,cg_name,num_edges_propagated,cg_construction_time,unexpected_leaks
+1083354991,0,-1,1528.09,328624,197404.0,82705838917,22955,gclock,6,CHA,303176776,17.0,0
+1006247427,0,-1,1340.72,205708,196327.0,86495977882,15927,gclock,1,RTA,327216778,204.0,0
+397703630,0,-1,11409.29,113171,207522.0,31009291848,12707,gclock,5,VTA,365420472,26.0,0
