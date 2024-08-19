@@ -1,0 +1,8 @@
+num_of_methods_propagated,expected_leaks,ground_truth,analysis_time,cg_edges,analysis_memory,stmts_propagated,reachable_methods,app_name,no_of_leaks,cg_name,num_edges_propagated,cg_construction_time,unexpected_leaks
+7650792290,0,-1,16639.36,1290304,194419.0,112832148734,54683,candycrush,13,CHA,296043808,86.0,0
+3200242653,0,-1,5810.87,1038016,194589.0,52844574975,45638,candycrush,8,RTA,287710205,1738.0,0
+1646073,0,-1,342.5,11001,13969.0,13166025,3045,candycrush,6,SPARK,6235744,12.0,0
+228,0,-1,24.05,5530,1930.0,874,2028,candycrush,0,s-2c,1663,20.54,0
+232,0,-1,5.26,5530,698.0,881,2028,candycrush,0,2t,1664,1.72,0
+231,0,-1,5.86,5543,1413.0,869,2035,candycrush,0,Z-2o,1662,2.44,0
+230,0,-1,6.14,5530,1029.0,881,2028,candycrush,0,2h,1661,2.58,0
