@@ -1,0 +1,6 @@
+num_of_methods_propagated,expected_leaks,ground_truth,analysis_time,cg_edges,analysis_memory,stmts_propagated,reachable_methods,app_name,no_of_leaks,cg_name,num_edges_propagated,cg_construction_time,unexpected_leaks
+263459,0,-1,19502.72,7387335,48549.0,2023568,216875,viber,8,CHA,185000,743.0,0
+446780815,0,-1,2032.45,378866,196167.0,2695402340,54416,viber,8,SPARK,303896917,919.0,0
+0,0,-1,25140.07,214425,0.0,0,38862,viber,-1,s-2c,0,23104.31,0
+500976662,0,-1,1262.61,229137,195554.0,4539548470,39189,viber,9,2t,308317332,83.73,0
+640029284,0,-1,19213.53,110443,214545.0,5632197952,34549,viber,9,Z-2o,404010567,939.87,0
