@@ -1,0 +1,7 @@
+num_of_methods_propagated,expected_leaks,ground_truth,analysis_time,cg_edges,analysis_memory,stmts_propagated,reachable_methods,app_name,no_of_leaks,cg_name,num_edges_propagated,cg_construction_time,unexpected_leaks
+6308223813,0,-1,2627.0,1124615,195376.0,84429839718,74558,msword,3,CHA,279528541,83.0,0
+0,0,-1,25144.4,23680,0.0,0,5390,msword,-1,SPARK,0,50.0,0
+758,0,-1,220.26,15331,3161.0,1741,4183,msword,0,s-2c,3403,214.09,0
+758,0,-1,10.53,15336,1512.0,1748,4183,msword,0,2t,3403,4.31,0
+759,0,-1,13.19,15346,716.0,1742,4189,msword,0,Z-2o,3404,7.07,0
+759,0,-1,54.75,15328,6011.0,1752,4183,msword,0,2h,3405,48.55,0
