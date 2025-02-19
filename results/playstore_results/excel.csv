@@ -1,8 +1,0 @@
-num_of_methods_propagated,expected_leaks,ground_truth,analysis_time,cg_edges,analysis_memory,stmts_propagated,reachable_methods,app_name,no_of_leaks,cg_name,num_edges_propagated,cg_construction_time,unexpected_leaks
-5161877719,0,-1,4295.64,1106885,195521.0,65856370859,71669,excel,9,CHA,281235187,79.0,0
-5210748327,0,-1,4438.49,1106888,207162.0,53402329489,71669,excel,8,CHA,286278300,78.0,0
-0,0,-1,25141.64,21579,0.0,0,5172,excel,-1,SPARK,0,36.0,0
-756,0,-1,136.28,13412,3680.0,1711,3949,excel,0,s-2c,3408,130.56,0
-755,0,-1,9.38,13417,1034.0,1729,3949,excel,0,2t,3407,3.61,0
-753,0,-1,11.72,13427,1664.0,1718,3955,excel,0,Z-2o,3403,6.06,0
-756,0,-1,45.07,13409,8152.0,1751,3949,excel,0,2h,3401,39.26,0

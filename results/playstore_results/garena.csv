@@ -1,3 +1,0 @@
-num_of_methods_propagated,expected_leaks,ground_truth,analysis_time,cg_edges,analysis_memory,stmts_propagated,reachable_methods,app_name,no_of_leaks,cg_name,num_edges_propagated,cg_construction_time,unexpected_leaks
-3064896214,0,-1,1509.66,305132,195538.0,47446981523,26686,garena,35,CHA,309929890,18.0,0
-1826006527,0,-1,2001.97,188349,195421.0,29066646054,20303,garena,35,RTA,335666222,414.0,0

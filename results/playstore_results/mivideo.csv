@@ -1,6 +1,0 @@
-num_of_methods_propagated,expected_leaks,ground_truth,analysis_time,cg_edges,analysis_memory,stmts_propagated,reachable_methods,app_name,no_of_leaks,cg_name,num_edges_propagated,cg_construction_time,unexpected_leaks
-2296774,0,-1,19183.96,5528412,59006.0,27197048,188554,mivideo,21,CHA,250786,654.0,0
-54162395,0,-1,5129.12,158885,195640.0,384011332,35503,mivideo,77,SPARK,185919009,570.0,0
-2029855,0,-1,19224.95,5528412,46996.0,24729933,188554,mivideo,24,CHA,227830,662.0,0
-54786943,0,-1,4361.23,158885,196109.0,397299207,35503,mivideo,80,SPARK,189631763,556.0,0
-0,0,-1,25162.82,95975,0.0,0,25305,mivideo,-1,2h,0,325.97,0

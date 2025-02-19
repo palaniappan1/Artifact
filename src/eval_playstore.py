@@ -1,7 +1,7 @@
+import csv
 import os
 import subprocess
 import sys
-import csv
 
 import CallGraphAlgorithms
 
@@ -28,7 +28,7 @@ exception_file_name = os.path.join(current_directory, '..', 'results/playstore_r
 
 def execute_jar(program_arguments, jar_path):
     # Set the timeout to 5 hours
-    timeout_seconds = 7 * 60 * 60
+    timeout_seconds = 5 * 60 * 60
     command = ["java", "-XX:+UseG1GC", "-XX:+UseAdaptiveSizePolicy", "-Xmx200g", "-Xss1g", "-cp", jar_path,
                mainClass] + program_arguments
     try:
@@ -87,7 +87,7 @@ def construct_arguments(callgraph_algorithm, apk_location, qilin_pta):
         '-r_j', ground_truth_file,
         '-cg', callgraph_algorithm,
         '-o', output_directory,
-        '-dt', 5 * 60 * 60,
+        '-dt', 7 * 60 * 60,
         '-d'
     ]
     if callgraph_algorithm == "QILIN":

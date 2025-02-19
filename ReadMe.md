@@ -21,7 +21,7 @@ Make sure you have all the necessary packages installed
 
 This whole evaluation might take a couple of hours. To run the whole evaluation for Phase 1. Execute this command from your root folder of this project
 
-``python src/eval_taintbench.py``
+``python3 src/eval_taintbench.py``
 
 For just checking the artifact evaluation, try running them with only subset of APK's, use this command
 
@@ -37,7 +37,7 @@ We ran all the 20 real world APK's using these 8 call graph configurations, for 
 
 Running these evaluation took almost two weeks. In order to test this evaluation (we can use the smallest of the APK's), run the command
 
-``python src/eval_playstore.py gsearchlite.apk``
+``python3 src/eval_playstore.py gsearchlite.apk``
 
 This command will place the result in a CSV format in the results/playstore_results, and the plots for runtime, memory consumption and correlation between memory and runtime, and between interprocedural edges and number of propagations, 
 in the plots folder.
